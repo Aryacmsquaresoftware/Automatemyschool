@@ -1,0 +1,338 @@
+:root {
+  /* --primary: #2563EB; */
+  --primary: #F97316;
+
+  --bs-primary: #F97316 !important;
+  /* Blue */
+  --accent: #F97316;
+  /* Orange */
+  --text: #1F2937;
+  /* Dark gray */
+  --muted: #6B7280;
+  /* Secondary text */
+  --surface: #FFFFFF;
+  /* Card background */
+  --wash: #F3F4F6;
+  /* Section bg */
+  --radius: 1.25rem;
+  /* Rounded corners */
+  --shadow: 0 10px 30px rgba(31, 41, 55, .08);
+}
+
+.text-primary {
+  color: #F97316 !important;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+.display-1,
+.display-2,
+.navbar-brand {
+  font-family: Poppins, Inter, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: var(--shadow);
+}
+
+.navbar a {
+  text-decoration: none !important;
+}
+
+.navbar a.active {
+  color:#2563EB !important;
+}
+
+.navbar .nav-link.active {
+  text-decoration: none !important;
+  color: var(--primary) !important;
+  /* keep it blue */
+
+}
+
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/* .btn-primary:hover {
+  filter: brightness(0.92);
+} */
+.btn-primary:hover {
+   background-color: #0B1220;
+}
+
+.btn-accent {
+  background-color:#FFF ;
+  border-color: #000;
+  color: #000;
+}
+
+.btn-accent:hover {
+  filter: brightness(0.92);
+  background-color: #1F2937;
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  background: radial-gradient(1200px 400px at 10% -10%, rgba(37, 99, 235, .15), transparent),
+    radial-gradient(1200px 400px at 110% 10%, rgba(249, 115, 22, .12), transparent),
+    linear-gradient(180deg, #fff 0%, #fff 60%, var(--wash) 100%);
+}
+
+.hero .badge-soft {
+  background: rgba(37, 99, 235, .08);
+  color: var(--primary);
+}
+
+.hero-illustration {
+  background: linear-gradient(135deg, rgba(37, 99, 235, .12), rgba(249, 115, 22, .12));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cards */
+
+.features-hero {
+  background: radial-gradient(1200px 400px at 10% -10%, rgba(37, 99, 235, .15), transparent),
+    radial-gradient(1200px 400px at 110% 10%, rgba(249, 115, 22, .12), transparent),
+    linear-gradient(180deg, #fff 0%, #fff 60%, var(--wash) 100%);
+}
+
+/* Base card */
+.feature-card {
+  background: #fff;
+  border-radius: var(--radius);
+  transition: all 0.35s ease;
+  border: none;
+}
+
+.hero {
+  min-height: 300px;
+  /* आप 500px, 600px try कर सकते हो */
+  display: flex;
+  align-items: center;
+  /* vertically center */
+}
+
+/* Common card style for USP + Features */
+.feature-card,
+.usp-card {
+  background: var(--surface);
+  border: 1px solid #eef1f5;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  cursor: pointer;
+  padding: 1.5rem;
+  /* USP wali spacing */
+}
+
+/* Hover effect same as USP */
+.feature-card:hover,
+.usp-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to bottom right, #f0f7ff, #f9f0ff);
+}
+
+
+.feature-card,
+.usp-card,
+.price-card {
+  background: var(--surface);
+  border: 1px solid #eef1f5;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.icon-bubble {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+}
+
+.icon-primary {
+  background: rgba(37, 99, 235, .1);
+  color: var(--primary);
+}
+
+.icon-accent {
+  background: rgba(249, 115, 22, .12);
+  color: var(--accent);
+}
+
+.section-label {
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+
+/* USP card hover */
+.usp-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  cursor: pointer;
+}
+
+.usp-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to bottom right, #f0f7ff, #f9f0ff);
+}
+
+/* USP image hover effect */
+.usp-image {
+  transition: transform 0.5s ease;
+}
+
+.usp-image:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* .accordion-button {
+  transition: all 0.3s ease;
+}
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+  color: #0d47a1;
+  font-weight: 600;
+}
+.accordion-item {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+} */
+
+
+
+/* Pricing */
+.price-card.popular {
+  border-color: var(--primary);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, .15);
+}
+
+.price {
+  font-weight: 700;
+  font-size: 2.25rem;
+}
+
+.badge-popular {
+  background: rgba(37, 99, 235, .1);
+  color: var(--primary);
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background: #f0f4ff;
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.btn-outline-primary{
+    background-color:#FFF ;
+  border-color: #000;
+  color: #000;
+}
+.btn-outline-primary:hover{
+   filter: brightness(0.92);
+  background-color: #1F2937;
+  color: #fff;
+}
+
+/* Custom Blue Theme for Partner Form */
+.btn-blue {
+  background-color:#F97316;
+  /* Primary Blue */
+  color: #fff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-blue:hover {
+  background-color:#0B1220;
+  /* Darker Blue */
+  color: #fff;
+}
+
+#partner-form .form-control,
+#partner-form .form-select {
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  padding: 10px 14px;
+}
+
+#partner-form .form-control:focus,
+#partner-form .form-select:focus {
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+
+
+#typing-text::after {
+  content: "|";
+  animation: blink 0.8s infinite;
+  color: #0d6efd;
+  /* Bootstrap primary */
+  margin-left: 5px;
+}
+
+@keyframes blink {
+
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+
+
+/* Footer */
+.footer {
+  background: #0B1220;
+  color: #c7d2fe;
+}
+
+.footer a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+/* Utilities */
+.bg-wash {
+  background: var(--wash);
+}
